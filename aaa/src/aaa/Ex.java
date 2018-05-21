@@ -27,7 +27,7 @@ public class Ex {
 		System.out.println();
 		list.stream().distinct().sorted((i,i2)->i2.compareTo(i)).map(i->i*10+",").forEach(System.out::print);
 		System.out.println();
-		
+		System.out.println("로또번호생성");
 		Stream.generate(()->(int)(Math.random()*45+1))//무한 스트림 1~45까지의 난수 반환
 		.distinct()//중복제거
 		.limit(6) //6개로 값을 제한
@@ -42,12 +42,16 @@ public class Ex {
 		.limit(6) //6개로 값을 제한
 		.sorted() // 기본정렬
 		.map(i->i+"")
-		.collect(Collectors.joining(","));
-//		.forEach(System.out::print);//출력
+		.collect(Collectors.joining(",")); // 컬렉트사용
 		
 		System.out.println(tmp);
 		System.out.println();
-		IntStream.range(1,10).parallel().forEach(System.out::print);
+		
+		IntStream.range(1,10).parallel().forEach(System.out::print);//병령스트림
+		System.out.println();
+		int k=21;
+		k=k/10*10; // 1의자리수 지움
+		System.out.println(k);
 		
 	}
 

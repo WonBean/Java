@@ -19,7 +19,7 @@ class Solution1 {
 		for (int i = 0; i < st.length; i++) {
 			// if (st[i].equals("DUP")) System.out.println(st[i]);
 			// if (st[i]=="DUP") System.out.println("asdad"+st[i]);
-			if (st[i].equals("DUP"))
+			if (st[i].equals("DUP")) 
 				try {
 					s.push(Integer.valueOf(st[i - 1]));
 				} catch (NumberFormatException e) {
